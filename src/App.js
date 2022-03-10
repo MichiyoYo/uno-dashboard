@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+import Header from "./components/Header";
+import CenterPanel from "./components/layout/split-screen/CenterPanel";
+import LeftPanel from "./components/layout/split-screen/LeftPanel";
+import RightPanel from "./components/layout/split-screen/RightPanel";
+import SplitScreen from "./components/layout/split-screen/SplitScreen";
+
+const HeaderElement = styled.header``;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Header />
       </header>
+      <main>
+        <SplitScreen children leftWeight={1} centerWeight={3} rightWeight={1}>
+          <LeftPanel name={"menu"} />
+          <CenterPanel name={"main"} />
+          <RightPanel name={"side"} />
+        </SplitScreen>
+      </main>
+      <footer>This is the footer</footer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import "./App.css";
 import styled from "styled-components";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import CenterPanel from "./components/layout/split-screen/CenterPanel";
 import LeftPanel from "./components/layout/split-screen/LeftPanel";
 import RightPanel from "./components/layout/split-screen/RightPanel";

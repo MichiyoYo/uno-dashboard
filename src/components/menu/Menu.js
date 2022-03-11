@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Collapsible from "./Collapsible";
+import { Badge, IconButton } from "@mui/material";
 
 const MainMenu = styled.ul`
   list-style-type: none;
@@ -13,6 +13,9 @@ const MainMenu = styled.ul`
 const ListItem = styled.li`
   margin-bottom: 5px;
   .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 20px;
     border-radius: 10px;
     color: #8ca1b6;
@@ -28,6 +31,13 @@ const ListItem = styled.li`
       }
     }
     .menu-item_icon {
+      margin-right: 10px;
+    }
+    .title-wrapper {
+      flex: 2;
+    }
+    .badge {
+      flex: 1;
       margin-right: 10px;
     }
   }
@@ -72,17 +82,23 @@ function Menu({ data }) {
           ) : (
             <ListItem key={i}>
               <div className="menu-item">
-                {menuItem.icon && (
-                  <FontAwesomeIcon
-                    className="menu-item_icon"
-                    icon={menuItem.icon}
-                  />
-                )}
-                <a className="menu-item_link" href={menuItem.link}>
-                  {menuItem.item}
-                </a>
-                {menuItem.sub && (
-                  <FontAwesomeIcon className="chevron" icon={faChevronDown} />
+                <div className="title-wrapper">
+                  {menuItem.icon && (
+                    <FontAwesomeIcon
+                      className="menu-item_icon"
+                      icon={menuItem.icon}
+                    />
+                  )}
+                  <a className="menu-item_link" href={menuItem.link}>
+                    {menuItem.item}
+                  </a>
+                </div>
+                {menuItem.badge && (
+                  <Badge
+                    className="badge"
+                    badgeContent={12}
+                    color="primary"
+                  ></Badge>
                 )}
               </div>
             </ListItem>

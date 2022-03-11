@@ -39,6 +39,7 @@ export const menu1 = [
     item: "Project",
     link: "http://localhost:3000/#",
     icon: faChalkboard,
+    badge: 12,
   },
   {
     item: "Team Member",

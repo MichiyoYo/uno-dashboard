@@ -31,10 +31,10 @@ const CollapsibleElement = styled.li`
   }
 `;
 
-function Collapsible({ title, icon, children }) {
+function Collapsible({ key, title, icon, children }) {
   const [collapsed, setCollapsed] = useState(true);
   return (
-    <CollapsibleElement className="collapsible">
+    <CollapsibleElement key={key} className="collapsible">
       <div
         className="collapsible_title"
         onClick={() => setCollapsed(!collapsed)}

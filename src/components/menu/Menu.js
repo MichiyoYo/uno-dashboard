@@ -13,7 +13,7 @@ const MainMenu = styled.ul`
 const ListItem = styled.li`
   margin-bottom: 5px;
   .menu-item {
-    padding: 15px;
+    padding: 15px 20px;
     border-radius: 10px;
     color: #8ca1b6;
     transition: all ease 150ms;

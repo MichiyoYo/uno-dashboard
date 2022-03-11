@@ -11,6 +11,8 @@ const LeftContainer = styled.div`
   margin-top: -2px;
   padding: 20px;
   .search-field {
+    background-color: #f9f9fb;
+    border-radius: 10px;
     fieldset {
       display: none;
     }

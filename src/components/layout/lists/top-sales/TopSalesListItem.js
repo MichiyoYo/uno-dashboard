@@ -20,7 +20,7 @@ const SaleListItem = styled.li`
         color: #fff;
         border-radius: 50%;
         font-size: 10px;
-        width: 15px;
+        width: 16px;
         height: 13px;
         display: flex;
         justify-content: center;

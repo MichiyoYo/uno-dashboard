@@ -4,6 +4,7 @@ import logo from "../../img/unoai.png";
 import SplitScreen from "../layout/split-screen/SplitScreen";
 import ToolBar from "./ToolBar";
 import UserInfo from "./UserInfo";
+import { currentUser } from "../../resources";
 
 const Logo = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ function Header(props) {
         <img src={logo} alt="Uno.ai Logo" />
       </Logo>
       <ToolBar />
-      <UserInfo />
+      <UserInfo currentUser={currentUser} />
     </SplitScreen>
   );
 }

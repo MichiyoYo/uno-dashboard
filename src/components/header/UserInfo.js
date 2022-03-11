@@ -29,17 +29,18 @@ const UserCredentials = styled.div`
   }
 `;
 
-function UserInfo(props) {
+function UserInfo({ currentUser }) {
+  const { name, role } = currentUser;
   return (
     <UserInfoContainer>
       <Avatar
         alt="Cristina Lester"
-        src="https://avatars.dicebear.com/api/human/cristina.svg"
+        src={`https://avatars.dicebear.com/api/human/${name}.svg`}
         className="avatar"
       />
       <UserCredentials>
-        <h3 className="user-name">Cristina Lester</h3>
-        <p className="user-title">Front-End Developer</p>
+        <h3 className="user-name">{name}</h3>
+        <p className="user-title">{role}</p>
       </UserCredentials>
     </UserInfoContainer>
   );

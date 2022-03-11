@@ -11,7 +11,7 @@ const Logo = styled.div`
   align-items: center;
   height: 100%;
   img {
-    width: 100px;
+    width: 80px;
     height: auto;
   }
 `;

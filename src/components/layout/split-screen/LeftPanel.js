@@ -3,6 +3,8 @@ import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
 import { InputAdornment } from "@mui/material";
 import { TextField } from "@mui/material";
+import Menu from "../../menu/Menu";
+import { menu1, menu2 } from "../../../resources";
 
 const LeftContainer = styled.div`
   height: 100%;
@@ -38,13 +40,16 @@ function LeftPanel({ name }) {
         placeholder="Search"
         InputProps={{
           startAdornment: (
-            <InputAdornment>
+            <InputAdornment position="start">
               <SearchIcon />
             </InputAdornment>
           ),
         }}
       />
       <Separator />
+      <Menu data={menu1} />
+      <Separator />
+      <Menu data={menu2} />
     </LeftContainer>
   );
 }

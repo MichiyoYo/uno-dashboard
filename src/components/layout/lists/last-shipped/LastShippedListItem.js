@@ -5,9 +5,9 @@ import styled from "styled-components";
 const InfoWrapper = styled.div``;
 
 function LastShippedListItem({ shippedItem }) {
-  const { name, destination, date } = shippedItem;
+  const { id, name, destination, date } = shippedItem;
   return (
-    <li className="shipping">
+    <li key={id} className="shipping">
       <LocalShippingIcon />
       <InfoWrapper className="shipping_info">
         <h4 className="shipping_info_name">{name}</h4>

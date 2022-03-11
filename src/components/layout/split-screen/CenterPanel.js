@@ -4,6 +4,7 @@ import styled from "styled-components";
 const CentralConteriner = styled.div`
   height: 100%;
   background-color: #f9f9fb;
+  padding: 40px;
 `;
 
 function CenterPanel({ name }) {

@@ -3,7 +3,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
-const CollapsibleElement = styled.li`
+const CollapsibleElement = styled.div`
   margin-bottom: 5px;
   .collapsible_title {
     padding: 15px 20px;
@@ -31,10 +31,10 @@ const CollapsibleElement = styled.li`
   }
 `;
 
-function Collapsible({ key, title, icon, children }) {
+function Collapsible({ title, icon, children }) {
   const [collapsed, setCollapsed] = useState(true);
   return (
-    <CollapsibleElement key={key} className="collapsible">
+    <CollapsibleElement className="collapsible">
       <div
         className="collapsible_title"
         onClick={() => setCollapsed(!collapsed)}

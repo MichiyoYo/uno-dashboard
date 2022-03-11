@@ -116,16 +116,19 @@ export const menu2 = [
 
 export const lastShipped = [
   {
+    id: 1,
     name: "Jared Vasquez",
     destination: "Elgin St., Daleware 1027",
     date: "8/21/21",
   },
   {
+    id: 2,
     name: "Patrick Star",
     destination: "Preston Rd., Maine 9831",
     date: "8/27/21",
   },
   {
+    id: 3,
     name: "Erlink Halland",
     destination: "Prestone Rd., Maine 8541",
     date: "8/30/21",
@@ -134,26 +137,31 @@ export const lastShipped = [
 
 export const topSales = [
   {
+    id: 1,
     name: "Mick Vujivic",
     revenue: "$3.891",
     percent: "+12.8%",
   },
   {
+    id: 2,
     name: "Uchia Itachi",
     revenue: "$3.891",
     percent: "+12.8%",
   },
   {
+    id: 3,
     name: "Darlene Smith",
     revenue: "$3.891",
     percent: "+12.8%",
   },
   {
+    id: 4,
     name: "Peter Roberts",
     revenue: "$3.891",
     percent: "+12.8%",
   },
   {
+    id: 5,
     name: "Marlo Loco",
     revenue: "$3.891",
     percent: "+12.8%",

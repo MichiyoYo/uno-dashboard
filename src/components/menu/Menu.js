@@ -10,7 +10,7 @@ const MainMenu = styled.ul`
   text-align: left;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled.div`
   margin-bottom: 5px;
   .menu-item {
     display: flex;
@@ -66,9 +66,9 @@ function Menu({ data }) {
   return (
     <MainMenu>
       {data.map((menuItem, i) => (
-        <>
+        <li className="menu-item" key={i}>
           {menuItem.sub ? (
-            <Collapsible key={i} icon={menuItem.icon} title={menuItem.item}>
+            <Collapsible icon={menuItem.icon} title={menuItem.item}>
               <SubMenu>
                 {menuItem.sub.map((subItem, j) => (
                   <ListItem className="sub-menu-item" key={j}>
@@ -80,7 +80,7 @@ function Menu({ data }) {
               </SubMenu>
             </Collapsible>
           ) : (
-            <ListItem key={i}>
+            <ListItem>
               <div className="menu-item">
                 <div className="title-wrapper">
                   {menuItem.icon && (
@@ -103,7 +103,7 @@ function Menu({ data }) {
               </div>
             </ListItem>
           )}
-        </>
+        </li>
       ))}
     </MainMenu>
   );

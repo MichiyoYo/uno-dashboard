@@ -5,6 +5,7 @@ import CenterPanel from "./components/layout/split-screen/CenterPanel";
 import LeftPanel from "./components/layout/split-screen/LeftPanel";
 import RightPanel from "./components/layout/split-screen/RightPanel";
 import SplitScreen from "./components/layout/split-screen/SplitScreen";
+import { Link } from "@mui/material";
 
 const HeaderElement = styled.header`
   flex: 1 0 100px;
@@ -16,6 +17,9 @@ const HeaderElement = styled.header`
 const FooterElement = styled.footer`
   flex: 1 0 60px;
   max-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const MainElement = styled.main`
@@ -35,7 +39,19 @@ function App() {
           <RightPanel name={"side"} />
         </SplitScreen>
       </MainElement>
-      <FooterElement>This is the footer</FooterElement>
+      <FooterElement>
+        <p>
+          Coded by{" "}
+          <Link
+            href="https://cristinalester.rocks"
+            target="_blank"
+            rel="noreferrer"
+            underline="none"
+          >
+            Cristina Lester
+          </Link>
+        </p>
+      </FooterElement>
     </div>
   );
 }

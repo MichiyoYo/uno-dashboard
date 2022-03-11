@@ -9,11 +9,24 @@ const MainMenu = styled.ul`
 `;
 
 const ListItem = styled.li`
+  margin-bottom: 5px;
   .menu-item {
     padding: 15px;
+    border-radius: 10px;
+    transition: all ease 150ms;
+    &:hover {
+      background: #3f8dfd;
+      color: #fff;
+      .menu-item_link {
+        color: #fff;
+      }
+    }
     .menu-item_icon {
       margin-right: 10px;
     }
+  }
+  .menu-item_link {
+    text-decoration: none;
   }
 `;
 
@@ -45,7 +58,9 @@ function Menu({ data }) {
             <SubMenu>
               {menuItem.sub.map((subItem, j) => (
                 <ListItem className="sub-menu-item" key={j}>
-                  <a href={subItem.link}>{subItem.item}</a>
+                  <a className="menu-item_link" href={subItem.link}>
+                    {subItem.item}
+                  </a>
                 </ListItem>
               ))}
             </SubMenu>

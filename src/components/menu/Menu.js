@@ -1,21 +1,23 @@
 import React from "react";
-
-const isObject = (element) => {
-  return typeof element === "object" && element !== null;
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Menu({ data }) {
-  if (!isObject(data)) return <li>{data}</li>;
-
-  const pairs = Object.entries(data);
   return (
     <ul>
-      {pairs.map(([key, value]) => (
-        <li>
-          {key}:
-          <ul>
-            <Menu data={value} />
-          </ul>
+      {data.map((menuItem, i) => (
+        <li key={i}>
+          {menuItem.icon && <FontAwesomeIcon icon={menuItem.icon} />}
+
+          <a href={menuItem.link}>{menuItem.item}</a>
+          {menuItem.sub && (
+            <ul>
+              {menuItem.sub.map((subItem, j) => (
+                <li key={j}>
+                  <a href={subItem.link}>{subItem.item}</a>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
       ))}
     </ul>

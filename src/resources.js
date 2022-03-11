@@ -1,38 +1,117 @@
+import {
+  faHouse,
+  faChalkboard,
+  faUserGroup,
+  faBriefcase,
+  faReceipt,
+  faList,
+  faGear,
+  faKey,
+} from "@fortawesome/free-solid-svg-icons";
+
 export const currentUser = {
   id: 1,
   name: "Cristina Lester",
   role: "Front-End Developer",
 };
 
-export const menu1 = {
-  dashboard: {
-    link1: "http://localhost:3000/#",
-    link2: "http://localhost:3000/#",
-    link3: "http://localhost:3000/#",
+export const menu1 = [
+  {
+    item: "Dashboard",
+    link: "http://localhost:3000/#",
+    icon: faHouse,
+    sub: [
+      {
+        item: "Link 1",
+        link: "http://localhost:3000/#",
+      },
+      {
+        item: "Link 2",
+        link: "http://localhost:3000/#",
+      },
+      {
+        item: "Link 3",
+        link: "http://localhost:3000/#",
+      },
+    ],
   },
-  project: "http://localhost:3000/#",
-  team_member: "http://localhost:3000/#",
-  job_board: "http://localhost:3000/#",
-  order: "http://localhost:3000/#",
-  crm: {
-    link4: "http://localhost:3000/#",
-    link5: "http://localhost:3000/#",
-    link6: "http://localhost:3000/#",
+  {
+    item: "Project",
+    link: "http://localhost:3000/#",
+    icon: faChalkboard,
   },
-};
+  {
+    item: "Team Member",
+    link: "http://localhost:3000/#",
+    icon: faUserGroup,
+  },
+  {
+    item: "Job Board",
+    link: "http://localhost:3000/#",
+    icon: faBriefcase,
+  },
+  {
+    item: "Order",
+    link: "http://localhost:3000/#",
+    icon: faReceipt,
+  },
+  {
+    item: "CRM",
+    link: "http://localhost:3000/#",
+    icon: faList,
+    sub: [
+      {
+        item: "Link 4",
+        link: "http://localhost:3000/#",
+      },
+      {
+        item: "Link 5",
+        link: "http://localhost:3000/#",
+      },
+      {
+        item: "Link 6",
+        link: "http://localhost:3000/#",
+      },
+    ],
+  },
+];
 
-export const menu2 = {
-  utilities: {
-    link7: "http://localhost:3000/#",
-    link8: "http://localhost:3000/#",
-    link9: "http://localhost:3000/#",
+export const menu2 = [
+  {
+    item: "Utilities",
+    link: "http://localhost:3000/#",
+    icon: faGear,
+    sub: [
+      {
+        item: "Link 7",
+        link: "http://localhost:3000/#",
+      },
+      {
+        item: "Link 8",
+        link: "http://localhost:3000/#",
+      },
+      {
+        item: "Link 9",
+        link: "http://localhost:3000/#",
+      },
+    ],
   },
-  authentication: {
-    link10: "http://localhost:3000/#",
-    link11: "http://localhost:3000/#",
-    link12: "http://localhost:3000/#",
+  {
+    item: "Authentication",
+    link: "http://localhost:3000/#",
+    icon: faKey,
+    sub: [
+      {
+        item: "Link 10",
+        link: "http://localhost:3000/#",
+      },
+      {
+        item: "Link 11",
+        link: "http://localhost:3000/#",
+      },
+    ],
   },
-};
+];
 
 export const lastShipped = [
   {

@@ -44,7 +44,7 @@ const RightContainer = styled.div`
 function RightPanel({ name }) {
   return (
     <RightContainer>
-      <Card className="card last-shipped-card" sx={{ minWidth: 275 }}>
+      <Card className="card last-shipped-card" sx={{ minWidth: 320 }}>
         <CardContent className="card-content">
           <div className="card-content_header">
             <h3>Last Shipped</h3>
@@ -64,7 +64,7 @@ function RightPanel({ name }) {
           </Button>
         </CardActions>
       </Card>
-      <Card className="card top-sales-card" sx={{ minWidth: 275 }}>
+      <Card className="card top-sales-card" sx={{ minWidth: 320 }}>
         <CardContent className="card-content">
           <div className="card-content_header">
             <h3>Top Sales</h3>

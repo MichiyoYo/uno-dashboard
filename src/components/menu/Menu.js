@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import Collapsible from "./Collapsible";
+import {
+  faHouse,
+  faChalkboard,
+  faUserGroup,
+  faBriefcase,
+  faReceipt,
+  faList,
+  faGear,
+  faKey,
+} from "@fortawesome/free-solid-svg-icons";
 
 const MainMenu = styled.ul`
   list-style-type: none;
@@ -54,6 +65,20 @@ const SubMenu = styled.ul`
 function Menu({ data }) {
   return (
     <MainMenu>
+      <Collapsible title="Menu Item" icon={faHouse}>
+        <ul>
+          <li>
+            <a>One</a>
+          </li>
+          <li>
+            <a>Two</a>
+          </li>
+          <li>
+            <a>Three</a>
+          </li>
+        </ul>
+      </Collapsible>
+
       {data.map((menuItem, i) => (
         <ListItem key={i}>
           <div className="menu-item">

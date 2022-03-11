@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const MainMenu = styled.ul`
   list-style-type: none;
@@ -13,7 +14,11 @@ const ListItem = styled.li`
   .menu-item {
     padding: 15px;
     border-radius: 10px;
+    color: #8ca1b6;
     transition: all ease 150ms;
+    .menu-item_link {
+      color: #8ca1b6;
+    }
     &:hover {
       background: #3f8dfd;
       color: #fff;
@@ -35,6 +40,14 @@ const SubMenu = styled.ul`
   padding-left: 0;
   .sub-menu-item {
     padding: 15px;
+    border-radius: 10px;
+    transition: all ease 150ms;
+    .menu-item_link {
+      color: #8ca1b6;
+    }
+    &:hover {
+      background: #f9f9fb;
+    }
   }
 `;
 
@@ -53,6 +66,9 @@ function Menu({ data }) {
             <a className="menu-item_link" href={menuItem.link}>
               {menuItem.item}
             </a>
+            {menuItem.sub && (
+              <FontAwesomeIcon className="chevron" icon={faChevronDown} />
+            )}
           </div>
           {menuItem.sub && (
             <SubMenu>

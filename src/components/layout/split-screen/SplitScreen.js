@@ -9,6 +9,8 @@ const Container = styled.div`
 const Pane = styled.div`
   flex: ${(props) => props.weight};
   height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 function SplitScreen({

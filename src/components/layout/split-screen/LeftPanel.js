@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
-import { IconButton, InputAdornment } from "@mui/material";
+import { InputAdornment } from "@mui/material";
 import { TextField } from "@mui/material";
 
 const LeftContainer = styled.div`
@@ -22,6 +22,13 @@ const LeftContainer = styled.div`
   }
 `;
 
+const Separator = styled.div`
+  height: 2px;
+  width: 100%;
+  background: #f3f3f5;
+  margin: 25px 0;
+`;
+
 function LeftPanel({ name }) {
   return (
     <LeftContainer>
@@ -37,6 +44,7 @@ function LeftPanel({ name }) {
           ),
         }}
       />
+      <Separator />
     </LeftContainer>
   );
 }

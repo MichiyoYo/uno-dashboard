@@ -9,9 +9,13 @@ const LeftContainer = styled.div`
   background-color: #fff;
   border-right: 2px solid #f3f3f5;
   margin-top: -2px;
+  padding: 20px;
   .search-field {
     fieldset {
       display: none;
+    }
+    input {
+      padding: 12px 14px;
     }
   }
 `;
@@ -26,9 +30,7 @@ function LeftPanel({ name }) {
         InputProps={{
           startAdornment: (
             <InputAdornment>
-              <IconButton>
-                <SearchIcon />
-              </IconButton>
+              <SearchIcon />
             </InputAdornment>
           ),
         }}

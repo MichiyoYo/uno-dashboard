@@ -3,7 +3,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
-const CollapsibleElement = styled.div`
+const CollapsibleElement = styled.li`
   margin-bottom: 5px;
   .collapsible_title {
     padding: 15px 20px;

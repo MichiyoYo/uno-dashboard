@@ -3,16 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Collapsible from "./Collapsible";
-import {
-  faHouse,
-  faChalkboard,
-  faUserGroup,
-  faBriefcase,
-  faReceipt,
-  faList,
-  faGear,
-  faKey,
-} from "@fortawesome/free-solid-svg-icons";
 
 const MainMenu = styled.ul`
   list-style-type: none;
@@ -65,48 +55,39 @@ const SubMenu = styled.ul`
 function Menu({ data }) {
   return (
     <MainMenu>
-      <Collapsible title="Menu Item" icon={faHouse}>
-        <ul>
-          <li>
-            <a>One</a>
-          </li>
-          <li>
-            <a>Two</a>
-          </li>
-          <li>
-            <a>Three</a>
-          </li>
-        </ul>
-      </Collapsible>
-
       {data.map((menuItem, i) => (
-        <ListItem key={i}>
-          <div className="menu-item">
-            {menuItem.icon && (
-              <FontAwesomeIcon
-                className="menu-item_icon"
-                icon={menuItem.icon}
-              />
-            )}
-            <a className="menu-item_link" href={menuItem.link}>
-              {menuItem.item}
-            </a>
-            {menuItem.sub && (
-              <FontAwesomeIcon className="chevron" icon={faChevronDown} />
-            )}
-          </div>
-          {menuItem.sub && (
-            <SubMenu>
-              {menuItem.sub.map((subItem, j) => (
-                <ListItem className="sub-menu-item" key={j}>
-                  <a className="menu-item_link" href={subItem.link}>
-                    {subItem.item}
-                  </a>
-                </ListItem>
-              ))}
-            </SubMenu>
+        <>
+          {menuItem.sub ? (
+            <Collapsible key={i} icon={menuItem.icon} title={menuItem.item}>
+              <SubMenu>
+                {menuItem.sub.map((subItem, j) => (
+                  <ListItem className="sub-menu-item" key={j}>
+                    <a className="menu-item_link" href={subItem.link}>
+                      {subItem.item}
+                    </a>
+                  </ListItem>
+                ))}
+              </SubMenu>
+            </Collapsible>
+          ) : (
+            <ListItem key={i}>
+              <div className="menu-item">
+                {menuItem.icon && (
+                  <FontAwesomeIcon
+                    className="menu-item_icon"
+                    icon={menuItem.icon}
+                  />
+                )}
+                <a className="menu-item_link" href={menuItem.link}>
+                  {menuItem.item}
+                </a>
+                {menuItem.sub && (
+                  <FontAwesomeIcon className="chevron" icon={faChevronDown} />
+                )}
+              </div>
+            </ListItem>
           )}
-        </ListItem>
+        </>
       ))}
     </MainMenu>
   );

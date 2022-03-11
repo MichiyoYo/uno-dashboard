@@ -7,6 +7,31 @@ const SaleListItem = styled.li`
   justify-content: space-between;
   align-items: flex-start;
   margin: 20px 0;
+  &:first-child {
+    .avatar-wrapper {
+      position: relative;
+
+      &:after {
+        content: "★";
+        position: absolute;
+        bottom: 0px;
+        right: 9px;
+        background: #fd9c3f;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 10px;
+        width: 15px;
+        height: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3px;
+      }
+    }
+    .avatar {
+      border: 2px solid #fd9c3f;
+    }
+  }
 `;
 
 const InfoWrapper = styled.div`
@@ -42,7 +67,7 @@ const UserInfo = styled.div`
   align-items: center;
   .avatar {
     background: #e1edff;
-    padding: 3px;
+    border: 2px solid #eee;
     margin-right: 10px;
   }
 `;
@@ -52,11 +77,13 @@ function TopSalesListItem({ saleItem }) {
   return (
     <SaleListItem key={id} className="sale">
       <UserInfo>
-        <Avatar
-          className="avatar"
-          alt={name}
-          src={`https://avatars.dicebear.com/api/human/${name}.svg`}
-        />
+        <div className="avatar-wrapper">
+          <Avatar
+            className="avatar"
+            alt={name}
+            src={`https://avatars.dicebear.com/api/human/${name}.svg`}
+          />
+        </div>
         <InfoWrapper className="sale_info">
           <h4 className="sale_info_name">{name}</h4>
           <p className="sale_info_percent">{percent}</p>

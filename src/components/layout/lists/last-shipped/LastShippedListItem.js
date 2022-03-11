@@ -31,7 +31,7 @@ const UserInfo = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    padding: 15px;
+    padding: 13px;
   }
 `;
 

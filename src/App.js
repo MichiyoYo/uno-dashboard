@@ -8,7 +8,7 @@ import SplitScreen from "./components/layout/split-screen/SplitScreen";
 
 const HeaderElement = styled.header`
   flex: 1;
-  max-height: 80px;
+  max-height: 100px;
   background-color: #fff;
   border-bottom: 2px solid #f3f3f5;
 `;

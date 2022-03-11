@@ -8,15 +8,23 @@ import styled from "styled-components";
 const ToolBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 30px;
+  height: 100%;
+  position: relative;
+  align-items: center;
   &:after {
     content: "";
     width: 2px;
     background: #f5f5f5;
     height: 40px;
     position: absolute;
-    top: 20px;
     right: 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+  .page-title {
+    margin: 0;
   }
 `;
 
@@ -31,13 +39,16 @@ const ButtonGroup = styled.div`
     &:hover {
       background: rgba(0, 0, 0, 0.08);
     }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 `;
 
 function ToolBar(props) {
   return (
     <ToolBarContainer>
-      <h1>Dashboard</h1>
+      <h2 className="page-title">Dashboard</h2>
       <ButtonGroup>
         <IconButton
           className="icon-button"

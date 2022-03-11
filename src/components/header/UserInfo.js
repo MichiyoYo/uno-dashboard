@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const UserInfoContainer = styled.div`
-  padding: 0 20px;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   height: 100%;

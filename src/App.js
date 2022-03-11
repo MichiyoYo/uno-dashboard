@@ -7,14 +7,14 @@ import RightPanel from "./components/layout/split-screen/RightPanel";
 import SplitScreen from "./components/layout/split-screen/SplitScreen";
 
 const HeaderElement = styled.header`
-  flex: 1;
+  flex: 1 0 100px;
   max-height: 100px;
   background-color: #fff;
   border-bottom: 2px solid #f3f3f5;
 `;
 
 const FooterElement = styled.footer`
-  flex: 1;
+  flex: 1 0 60px;
   max-height: 60px;
 `;
 

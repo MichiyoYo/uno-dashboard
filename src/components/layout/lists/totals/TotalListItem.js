@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const TotalLi = styled.li`
-  flex: 25%;
+  flex: 1 0 25%;
+  width: fit-content;
+  max-width: fit-content;
   .card {
     border-radius: 10px;
     border: 2px solid #f3f3f5;
@@ -24,7 +26,7 @@ function TotalListItem({ totalItem }) {
 
   return (
     <TotalLi className="total">
-      <Card className="card last-shipped-card" sx={{ minWidth: 320 }}>
+      <Card className="card last-shipped-card">
         <CardContent className="card-content">
           <div className="total_header">
             <FontAwesomeIcon className="total_header_icon" icon={icon} />

@@ -14,6 +14,7 @@ const CentralConteriner = styled.div`
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      justify-content: space-between;
     }
   }
 `;

@@ -7,7 +7,7 @@ import styled from "styled-components";
 const TotalLi = styled.li`
   flex: 1 0 25%;
   width: fit-content;
-  max-width: fit-content;
+  max-width: 25%;
   .card {
     border-radius: 10px;
     border: 2px solid #f3f3f5;

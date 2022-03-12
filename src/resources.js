@@ -7,6 +7,10 @@ import {
   faList,
   faGear,
   faKey,
+  faWallet,
+  faCartShopping,
+  faBoxArchive,
+  faBell,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const currentUser = {
@@ -165,5 +169,32 @@ export const topSales = [
     name: "Marlo Loco",
     revenue: "$3.891",
     percent: "+12.8%",
+  },
+];
+
+export const totals = [
+  {
+    amount: "$72,257.49",
+    type: "Balance",
+    percentage: "+42%",
+    icon: faWallet,
+  },
+  {
+    amount: "$92,152.79",
+    type: "Sales",
+    percentage: "+17%",
+    icon: faCartShopping,
+  },
+  {
+    amount: "$22,139.09",
+    type: "Exprense",
+    percentage: "-16%",
+    icon: faBoxArchive,
+  },
+  {
+    amount: "40.257.491",
+    type: "Visitors",
+    percentage: "+21%",
+    icon: faBell,
   },
 ];

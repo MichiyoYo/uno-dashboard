@@ -6,6 +6,7 @@ import { totals } from "../../../resources";
 import TotalListItem from "../lists/totals/TotalListItem";
 import { Card, CardContent } from "@mui/material";
 import SalesChart from "../../chart/SalesChart";
+import SelectPeriod from "../../select/SelectPeriod";
 
 const CentralConteriner = styled.div`
   height: 100%;
@@ -60,6 +61,7 @@ function CenterPanel({ name }) {
           <CardContent className="card-content">
             <div className="card-content_header">
               <h3>Sales Analytic</h3>
+              <SelectPeriod />
             </div>
             <div className="card-content_body">
               <SalesChart />

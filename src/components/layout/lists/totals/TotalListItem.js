@@ -72,6 +72,7 @@ const TotalFooter = styled.div`
     margin-top: 6px;
     font-size: 12px;
     color: #a6b6c7;
+    text-transform: capitalize;
   }
 `;
 

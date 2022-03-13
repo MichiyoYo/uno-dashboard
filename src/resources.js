@@ -192,7 +192,7 @@ export const totals = [
     icon: faBoxArchive,
   },
   {
-    amount: "40.257.491",
+    amount: "$40,257.491",
     type: "visitors",
     percentage: "+21%",
     icon: faBell,

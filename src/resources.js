@@ -261,7 +261,7 @@ export const dataTableRows = [
     "Mar 22,2021",
     "Partick Star",
     "$27,221.71",
-    "Pending"
+    "Completed"
   ),
   createData(
     "#ILY4146",

@@ -23,4 +23,4 @@ To install the project, you can clone this repo and then run
 to install the dependencies.
 
 After the installation is complete, you can run the app locally with
-` npm start`
+` npm start`.

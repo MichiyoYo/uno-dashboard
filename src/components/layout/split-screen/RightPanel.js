@@ -42,6 +42,10 @@ const RightContainer = styled.div`
 `;
 
 function RightPanel({ name }) {
+  const handleClick = () => {
+    console.log("New Shipment button was clicked");
+  };
+
   return (
     <RightContainer>
       <Card className="card last-shipped-card" sx={{ minWidth: 320 }}>
@@ -59,7 +63,12 @@ function RightPanel({ name }) {
           />
         </CardContent>
         <CardActions className="card-actions">
-          <Button className="btn" size="medium" variant="outlined">
+          <Button
+            onClick={handleClick}
+            className="btn"
+            size="medium"
+            variant="outlined"
+          >
             New Shipment
           </Button>
         </CardActions>

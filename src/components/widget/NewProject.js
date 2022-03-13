@@ -20,11 +20,15 @@ const NewProjectWrapper = styled.div`
 `;
 
 function NewProject(props) {
+  const handleClick = (e) => {
+    console.log("New project button was clicked");
+  };
+
   return (
     <NewProjectWrapper>
       <h4>Add New Project</h4>
       <p>Add new project by assigning team members</p>
-      <Button className="btn" variant="contained">
+      <Button onClick={handleClick} className="btn" variant="contained">
         New Project
       </Button>
     </NewProjectWrapper>

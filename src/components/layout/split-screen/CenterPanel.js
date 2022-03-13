@@ -56,6 +56,10 @@ const CentralConteriner = styled.div`
 `;
 
 function CenterPanel({ name }) {
+  const handleClick = () => {
+    console.log("New Invoce button was clicked");
+  };
+
   return (
     <CentralConteriner>
       <div className="totals">
@@ -83,7 +87,7 @@ function CenterPanel({ name }) {
           <CardContent className="card-content">
             <div className="card-content_header">
               <h3>Invoices</h3>
-              <Button variant="outlined">
+              <Button onClick={handleClick} variant="outlined">
                 <FontAwesomeIcon className="plus-icon" icon={faPlus} />
                 New Invoice
               </Button>

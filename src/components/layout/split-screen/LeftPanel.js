@@ -16,6 +16,7 @@ const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 270px;
   .menu-wrapper {
     flex: 1;
     .search-field {

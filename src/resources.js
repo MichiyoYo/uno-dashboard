@@ -277,11 +277,4 @@ export const dataTableRows = [
     "$43,1221.11",
     "Completed"
   ),
-  createData(
-    "#ILY1234",
-    "Mar 21,2021",
-    "Marlo Loco",
-    "$12,992.11",
-    "Completed"
-  ),
 ];

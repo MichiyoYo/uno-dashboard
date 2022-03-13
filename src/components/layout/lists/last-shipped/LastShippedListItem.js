@@ -54,7 +54,7 @@ function LastShippedListItem({ shippedItem }) {
         </div>
         <InfoWrapper className="shipping_info">
           <h4 className="shipping_info_name">{name}</h4>
-          <p className="shipping_info_destination">{destination}</p>
+          <p className="shipping_info_destination">to: {destination}</p>
         </InfoWrapper>
       </UserInfo>
       <Date className="shipping_date">{date}</Date>

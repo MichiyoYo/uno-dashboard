@@ -176,25 +176,25 @@ export const totals = [
   {
     amount: "$72,257.49",
     type: "balance",
-    percentage: "+42% ↑",
+    percentage: "+42%",
     icon: faWallet,
   },
   {
     amount: "$92,152.79",
     type: "sales",
-    percentage: "+17% ↑",
+    percentage: "+17%",
     icon: faCartShopping,
   },
   {
     amount: "$22,139.09",
     type: "expense",
-    percentage: "-16% ↓",
+    percentage: "-16%",
     icon: faBoxArchive,
   },
   {
     amount: "40.257.491",
     type: "visitors",
-    percentage: "+21% ↑",
+    percentage: "+21%",
     icon: faBell,
   },
 ];

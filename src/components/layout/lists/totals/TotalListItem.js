@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const TotalLi = styled.li`
   flex: 1 0 25%;
@@ -46,12 +47,25 @@ const TotalHeader = styled.div`
       background: #f0f4ff;
     }
   }
+
+  .total_header_percentage {
+    font-weight: 600;
+    font-size: 13px;
+    &.positive {
+      color: #63c593;
+    }
+    &.negative {
+      color: #ff4e4e;
+    }
+  }
 `;
 
 const TotalFooter = styled.div``;
 
 function TotalListItem({ totalItem }) {
   const { amount, type, percentage, icon } = totalItem;
+
+  const isNegative = (str) => str.indexOf("-") > -1;
 
   return (
     <TotalLi className="total">
@@ -62,7 +76,18 @@ function TotalListItem({ totalItem }) {
               className={`total_header_icon ${type}`}
               icon={icon}
             />
-            <p className="total_header_percentage">{percentage}</p>
+            <p
+              className={`total_header_percentage ${
+                isNegative(percentage) ? "negative" : "positive"
+              }`}
+            >
+              {percentage}{" "}
+              {isNegative(percentage) ? (
+                <FontAwesomeIcon icon={faArrowDown} />
+              ) : (
+                <FontAwesomeIcon icon={faArrowUp} />
+              )}
+            </p>
           </TotalHeader>
           <div className="total_footer">
             <h4 className="total_footer_amount">{amount}</h4>

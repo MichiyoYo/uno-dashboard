@@ -209,8 +209,8 @@ export const chartData = [
   {
     name: "Oct 22",
     "Total Earnings": 67433.09,
-    "Total Visitors": 123,
-    "Total Expenses": 1234.12,
+    "Total Visitors": 11234,
+    "Total Expenses": 12343.12,
   },
   {
     name: "Oct 23",

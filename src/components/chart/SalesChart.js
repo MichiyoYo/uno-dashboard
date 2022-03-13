@@ -15,8 +15,6 @@ function SalesChart(props) {
   return (
     <ResponsiveContainer width="100%" height={400}>
       <BarChart
-        width={500}
-        height={300}
         barGap={20}
         data={chartData}
         margin={{
@@ -26,9 +24,17 @@ function SalesChart(props) {
           bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <CartesianGrid vertical={false} horizontal={false} />
+        <XAxis
+          dataKey="name"
+          tick={{ stroke: "#96aabd", fontSize: "13px" }}
+          axisLine={false}
+        />
+        <YAxis
+          tickLine={false}
+          axisLine={false}
+          tick={{ stroke: "#96aabd", fontSize: "13px" }}
+        />
         <Tooltip />
         <Legend />
         <Bar dataKey="Total Earnings" stackId="a" fill="#3f8dfd" />

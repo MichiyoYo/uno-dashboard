@@ -8,7 +8,8 @@ import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 const TotalLi = styled.li`
   flex: 1 0 25%;
   width: fit-content;
-  max-width: 23%;
+  min-width: fit-content;
+  max-width: 22%;
   .card {
     border-radius: 10px;
     border: 2px solid #f3f3f5;
@@ -60,7 +61,19 @@ const TotalHeader = styled.div`
   }
 `;
 
-const TotalFooter = styled.div``;
+const TotalFooter = styled.div`
+  .total_footer_amount {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .total_footer_type {
+    margin: 0;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #a6b6c7;
+  }
+`;
 
 function TotalListItem({ totalItem }) {
   const { amount, type, percentage, icon } = totalItem;
@@ -89,10 +102,10 @@ function TotalListItem({ totalItem }) {
               )}
             </p>
           </TotalHeader>
-          <div className="total_footer">
+          <TotalFooter className="total_footer">
             <h4 className="total_footer_amount">{amount}</h4>
             <p className="total_footer_type">Total {type}</p>
-          </div>
+          </TotalFooter>
         </CardContent>
       </Card>
     </TotalLi>

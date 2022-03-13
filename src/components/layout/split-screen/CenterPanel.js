@@ -5,6 +5,7 @@ import List from "../lists/List";
 import { totals } from "../../../resources";
 import TotalListItem from "../lists/totals/TotalListItem";
 import { Card, CardContent } from "@mui/material";
+import SalesChart from "../../chart/SalesChart";
 
 const CentralConteriner = styled.div`
   height: 100%;
@@ -59,6 +60,9 @@ function CenterPanel({ name }) {
           <CardContent className="card-content">
             <div className="card-content_header">
               <h3>Sales Analytic</h3>
+            </div>
+            <div className="card-content_body">
+              <SalesChart />
             </div>
           </CardContent>
         </Card>

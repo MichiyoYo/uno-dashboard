@@ -198,3 +198,48 @@ export const totals = [
     icon: faBell,
   },
 ];
+
+export const chartData = [
+  {
+    name: "Oct 21",
+    "Total Earnings": 24525.09,
+    "Total Visitors": 34234,
+    "Total Expenses": 5463.12,
+  },
+  {
+    name: "Oct 22",
+    "Total Earnings": 67433.09,
+    "Total Visitors": 123,
+    "Total Expenses": 1234.12,
+  },
+  {
+    name: "Oct 23",
+    "Total Earnings": 56366.09,
+    "Total Visitors": 4232,
+    "Total Expenses": 23456.12,
+  },
+  {
+    name: "Oct 24",
+    "Total Earnings": 12345.09,
+    "Total Visitors": 653,
+    "Total Expenses": 5432.12,
+  },
+  {
+    name: "Oct 25",
+    "Total Earnings": 34123.09,
+    "Total Visitors": 14565,
+    "Total Expenses": 1234.12,
+  },
+  {
+    name: "Oct 26",
+    "Total Earnings": 56532.09,
+    "Total Visitors": 2341,
+    "Total Expenses": 4566.12,
+  },
+  {
+    name: "Oct 27",
+    "Total Earnings": 12345.09,
+    "Total Visitors": 12565,
+    "Total Expenses": 5675.12,
+  },
+];

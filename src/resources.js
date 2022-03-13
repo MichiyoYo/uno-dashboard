@@ -209,8 +209,8 @@ export const chartData = [
   {
     name: "Oct 22",
     "Total Earnings": 67433.09,
-    "Total Visitors": 11234,
-    "Total Expenses": 12343.12,
+    "Total Visitors": 1234,
+    "Total Expenses": 123434.12,
   },
   {
     name: "Oct 23",
@@ -221,14 +221,14 @@ export const chartData = [
   {
     name: "Oct 24",
     "Total Earnings": 12345.09,
-    "Total Visitors": 653,
-    "Total Expenses": 5432.12,
+    "Total Visitors": 65334,
+    "Total Expenses": 54323.12,
   },
   {
     name: "Oct 25",
-    "Total Earnings": 34123.09,
+    "Total Earnings": 87123.09,
     "Total Visitors": 14565,
-    "Total Expenses": 1234.12,
+    "Total Expenses": 12343.12,
   },
   {
     name: "Oct 26",
@@ -242,4 +242,46 @@ export const chartData = [
     "Total Visitors": 12565,
     "Total Expenses": 5675.12,
   },
+];
+
+function createData(number, date, clientName, amount, status) {
+  return { number, date, clientName, amount, status };
+}
+
+export const dataTableRows = [
+  createData(
+    "#ILY2413",
+    "Mar 21,2021",
+    "Erlik Halland",
+    "$13,243.09",
+    "Pending"
+  ),
+  createData(
+    "#ILY2000",
+    "Mar 22,2021",
+    "Partick Star",
+    "$27,221.71",
+    "Pending"
+  ),
+  createData(
+    "#ILY4146",
+    "Mar 21,2021",
+    "Jared Vasquez",
+    "$41,071.90",
+    "Completed"
+  ),
+  createData(
+    "#ILY6727",
+    "Mar 23,2021",
+    "Mick Vujivic",
+    "$43,1221.11",
+    "Completed"
+  ),
+  createData(
+    "#ILY1234",
+    "Mar 21,2021",
+    "Marlo Loco",
+    "$12,992.11",
+    "Completed"
+  ),
 ];

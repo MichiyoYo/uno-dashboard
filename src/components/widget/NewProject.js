@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const NewProjectWrapper = styled.div`
+  margin-top: 60px;
   padding: 25px 40px;
   background: #f9f9fb;
   border-radius: 10px;

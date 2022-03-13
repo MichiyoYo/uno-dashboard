@@ -8,14 +8,14 @@ import { menu1, menu2 } from "../../../resources";
 import NewProject from "../../widget/NewProject";
 
 const LeftContainer = styled.div`
-  height: 85vh;
+  height: 100vh;
   background-color: #fff;
   border-right: 2px solid #f3f3f5;
   margin-top: -2px;
   padding: 20px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
   min-width: 270px;
   .menu-wrapper {
     flex: 1;

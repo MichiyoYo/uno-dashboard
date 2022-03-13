@@ -4,9 +4,12 @@ import styled from "styled-components";
 import List from "../lists/List";
 import { totals } from "../../../resources";
 import TotalListItem from "../lists/totals/TotalListItem";
-import { Card, CardContent } from "@mui/material";
+import { Button, Card, CardContent } from "@mui/material";
 import SalesChart from "../../chart/SalesChart";
 import SelectPeriod from "../../select/SelectPeriod";
+import InvoiceTable from "../../table/InvoiceTable";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const CentralConteriner = styled.div`
   height: 100%;
@@ -44,6 +47,9 @@ const CentralConteriner = styled.div`
       width: 100%;
     }
   }
+  .plus-icon {
+    margin-right: 10px;
+  }
 `;
 
 function CenterPanel({ name }) {
@@ -74,6 +80,13 @@ function CenterPanel({ name }) {
           <CardContent className="card-content">
             <div className="card-content_header">
               <h3>Invoices</h3>
+              <Button variant="outlined">
+                <FontAwesomeIcon className="plus-icon" icon={faPlus} />
+                New Invoice
+              </Button>
+            </div>
+            <div className="card-content_body">
+              <InvoiceTable />
             </div>
           </CardContent>
         </Card>

@@ -175,26 +175,26 @@ export const topSales = [
 export const totals = [
   {
     amount: "$72,257.49",
-    type: "Balance",
-    percentage: "+42%",
+    type: "balance",
+    percentage: "+42% ↑",
     icon: faWallet,
   },
   {
     amount: "$92,152.79",
-    type: "Sales",
-    percentage: "+17%",
+    type: "sales",
+    percentage: "+17% ↑",
     icon: faCartShopping,
   },
   {
     amount: "$22,139.09",
-    type: "Exprense",
-    percentage: "-16%",
+    type: "expense",
+    percentage: "-16% ↓",
     icon: faBoxArchive,
   },
   {
     amount: "40.257.491",
-    type: "Visitors",
-    percentage: "+21%",
+    type: "visitors",
+    percentage: "+21% ↑",
     icon: faBell,
   },
 ];

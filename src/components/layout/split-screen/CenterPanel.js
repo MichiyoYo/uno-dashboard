@@ -15,6 +15,9 @@ const CentralConteriner = styled.div`
   height: 100%;
   background-color: #f9f9fb;
   padding: 40px;
+  h3 {
+    margin-left: 15px;
+  }
   .totals {
     ul {
       display: flex;

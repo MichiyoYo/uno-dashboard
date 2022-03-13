@@ -1,18 +1,31 @@
+import styled from "styled-components";
 import {
   Table,
-  TableContainer,
   TableHead,
   TableRow,
   TableCell,
   TableBody,
-  Paper,
 } from "@mui/material";
 import React from "react";
 import { dataTableRows } from "../../resources";
 
+const InvoiceTableWrapper = styled.div`
+  table {
+    box-shadow: none;
+    thead {
+      background: #f9f9fb;
+      th {
+        color: #97abbe;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+    }
+  }
+`;
+
 function InvoiceTable(props) {
   return (
-    <TableContainer component={Paper}>
+    <InvoiceTableWrapper>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -38,7 +51,7 @@ function InvoiceTable(props) {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </InvoiceTableWrapper>
   );
 }
 

@@ -8,6 +8,7 @@ This is a simple dashboard made with
 - Material UI
 - Rechart
 - FontAwesome
+- Styled Components
 
 Designed by [Firman Jabbar](https://dribbble.com/firmanjabbar) and coded by me!
 
